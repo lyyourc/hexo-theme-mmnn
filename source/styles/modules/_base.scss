@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-sans;
+}
+
+body {
+  background: $color-background;
+}
+
+a {
+  color: $color-anchor;
+  text-decoration: none;
+  
+  &:hover {
+    color: lighten($color-anchor, 40%);
+  }
+    
+}

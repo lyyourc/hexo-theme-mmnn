@@ -1,0 +1,7 @@
+if !pagination
+  each post in page.posts.toArray()
+    != partial('article', { post: post, index: true })
+
+  != partial('article/article-page-nav')
+
+

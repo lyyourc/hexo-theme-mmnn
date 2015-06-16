@@ -1,0 +1,29 @@
+footer.app-footer {
+  height: 100px;
+  background: $color-base;
+  font-size: .9em;
+
+  & .footer-info {
+    padding: 1em 3em;
+  }
+
+  & a {
+    color: lighten($color-anchor, 15%)
+  }
+
+  & .pulse-heart {
+    margin-left: .5em;
+    @include animation(pulse .8s infinite);
+    color: #e8111c;
+  }
+}
+
+@include keyframes(pulse) {
+  0%, 100% {
+    @include transform(scale(.6));
+  }
+  20%, 76% {
+    @include transform(scale(.8));
+  }
+}
+

@@ -1,0 +1,23 @@
+header(role='banner')
+  h1.title
+    a(href=config.root)= config.title
+
+  .about-me
+    img(src=url_for(theme.social.avantar))
+    h3.author= config.author
+
+    ul.social-list
+      li
+        a.fa.fa-lg.fa-github(
+          href=theme.social.github ? theme.social.github : '#'
+        )
+
+      li
+        a.fa.fa-lg.fa-weibo(
+          href=theme.social.weibo ? theme.social.weibo : '#'
+        )
+
+      li
+        a.fa.fa-lg.fa-rss(href="#")
+
+
