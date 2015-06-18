@@ -2,7 +2,7 @@
 author: Drake Leung
 author_url: https://github.com/DrakeLeung
 theme_name: mmnn
-theme_url: I dont konw now
+theme_url: https://github.com/DrakeLeung/hexo-theme-mmnn
 
 favicon: images/favicon.ico
 
@@ -22,3 +22,9 @@ social:
 # analytics
 google_analytics: UA-63900271-1
 baidu_analytics: true
+
+
+# navs
+navs:
+  Home: /
+  Archives: archives
