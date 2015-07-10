@@ -20,11 +20,11 @@ social:
 
 
 # analytics
-google_analytics: UA-63900271-1
+# google_analytics: UA-63900271-1
 baidu_analytics: true
 
 
 # navs
 navs:
-  Home: /
+  Home: https://github.com/DrakeLeung/blog/
   Archives: archives
