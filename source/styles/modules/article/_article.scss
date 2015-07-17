@@ -27,5 +27,9 @@ main {
         color: $article-font-color;
       }
     }
+
+    img {
+      max-width: 100%;
+    }
   }
 }
