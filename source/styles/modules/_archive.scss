@@ -1,3 +1,13 @@
+.article-wrap {
+  padding: 2rem;
+  border-bottom: 1px solid $color-base;
+
+  .article-month {
+    margin: 0;
+    color: $color-base;
+  }
+}
+
 .article-list {
   @include display(flex);
   @include flex-direction(row);
@@ -43,4 +53,11 @@
   &:hover {
     border: 2px solid $color-base;
   }
+}
+
+.article-item:nth-child(2n + 5) {
+  background: $color-base;
+}
+.article-item:last-child {
+  background: #fff;
 }

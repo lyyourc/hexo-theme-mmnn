@@ -1,11 +1,11 @@
 main {
-  width: 70%;
+  width: 60%;
 
   @include phone {
-    width: 90%;
+    width: 100%;
   }
   @include tablet {
-    width: 80%;
+    width: 90%;
   }
 
   margin: 0 auto;
@@ -21,7 +21,7 @@ main {
 
     a {
       text-decoration: none;
-      color: $color-base;
+      color: darken($color-base, 10%);
 
       &:hover {
         color: $article-font-color;

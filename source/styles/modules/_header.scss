@@ -26,11 +26,11 @@ header.banner .about-me {
     width: $avantar-width;
     @include my-border-radius(50%);
 
-    border: 3px solid #fff;
+    border: 3px solid #eee;
   }
 
   .author {
-    margin: 1px;
+    font-style: italic;
   }
 
 }

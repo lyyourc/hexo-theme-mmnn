@@ -8,21 +8,36 @@ else
   if page.category
     h1= page.category
     
-  section.article-list
-    each post in page.posts.toArray()
-      section.article-item
-        a(href=url_for(post.path)).thumbnail
-        a(href=url_for(post.path))= post.title
-        p.article-description= post.description
-          
-        span.fa.fa-calendar.article-date
-          small= date(post.date)
-          
-        span.article-comment-count.fa.fa-comments
-          a(
-            href=url_for(post.path)
-            data-disqus-identifier=post.path
-            class='disqus-comment-count'
-          ) 
+  - var last = null;
+  
+  each post, index in page.posts.toArray()
+    - var current = post.date.month();
+    
+    if (last != current) 
+      if (last != null)
+        | </div></section>
+        
+      - last = current;
+      | <section class="article-wrap">
+      
+      h2(class="article-month")= time(post.date, 'YYYY-MM')
+      | <div class="article-list">
+        
+    section.article-item
+      a(href=url_for(post.path)).thumbnail
+      a(href=url_for(post.path))= post.title
+      p.article-description= post.description
+        
+      span.fa.fa-calendar.article-date
+        small= date(post.date)
+        
+      span.article-comment-count.fa.fa-comments
+        a(
+          href=url_for(post.path)
+          data-disqus-identifier=post.path
+          class='disqus-comment-count'
+        ) 
+        
+  | </div></section>
 
 != partial('article/article-page-nav')
